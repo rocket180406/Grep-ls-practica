@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 public class Lanzador {
 
     public static final String MSG_ERROR = "Se ha producido un error al ejecutar el comando";
+    public static final String MSG_EXITO = "Comandos lanzados con éxito";
     public static final String[] COMANDO_LS = {"ls"};
     public static final String[] COMANDO_GREP = {"grep", "a"};
 
@@ -35,7 +36,7 @@ public class Lanzador {
             int exitGrep = procesoGrep.waitFor();
 
             if (exitLs == 0 && exitGrep == 0) {
-                System.out.println("Success!");
+                System.out.println(MSG_EXITO);
                 System.out.println(output);
                 System.exit(0);
             } else {
