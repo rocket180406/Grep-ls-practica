@@ -24,11 +24,11 @@ public class Lanzador {
             }
 
             StringBuilder output = new StringBuilder();
-            try (BufferedReader reader = new BufferedReader(
+            try (BufferedReader br = new BufferedReader(
                     new InputStreamReader(procesoGrep.getInputStream()))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    output.append(line).append("\n");
+                String linea;
+                while ((linea = br.readLine()) != null) {
+                    output.append(linea).append("\n");
                 }
             }
 
